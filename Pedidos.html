@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html class="wide wow-animation" lang="en">
+    <head>
+        <title>Pedidos</title>
+    </head>
+    <style>
+                .mycontainer{
+                    width: 100%;
+                    overflow: auto;
+                }
+
+                .mycontainer div{
+                    width:30%;  
+                    display:inline-block;
+                }
+                
+                .button {
+ 
+                    position: relative;
+                    border: none;
+                    background: transparent;
+  padding: 0;
+  outline: none;
+  cursor: pointer;
+  font-family: sans-serif;
+}
+
+/* Shadow layer */
+.button .shadow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.25);
+  border-radius: 8px;
+  transform: translateY(2px);
+  transition: transform 600ms cubic-bezier(0.3, 0.7, 0.4, 1);
+}
+
+/* Edge layer */
+.button .edge {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  background: linear-gradient(
+    to left,
+    hsl(217, 33%, 16%) 0%,
+    hsl(217, 33%, 32%) 8%,
+    hsl(217, 33%, 32%) 92%,
+    hsl(217, 33%, 16%) 100%
+  );
+}
+
+/* Front layer */
+.button .front {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 28px;
+  font-size: 1.25rem;
+  color: white;
+  background: hsl(217, 33%, 17%);
+  border-radius: 8px;
+  transform: translateY(-4px);
+  transition: transform 600ms cubic-bezier(0.3, 0.7, 0.4, 1);
+}
+
+/* Hover and active states */
+.button:hover .shadow {
+  transform: translateY(4px);
+  transition: transform 250ms cubic-bezier(0.3, 0.7, 0.4, 1.5);
+}
+
+.button:hover .front {
+  transform: translateY(-6px);
+  transition: transform 250ms cubic-bezier(0.3, 0.7, 0.4, 1.5);
+}
+
+.button:active .shadow {
+  transform: translateY(1px);
+  transition: transform 34ms;
+}
+
+.button:active .front {
+  transform: translateY(-2px);
+  transition: transform 34ms;
+}
+
+/* Disable text selection */
+.button .front span {
+  user-select: none;
+}
+
+.coolinput {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  position: static;
+  max-width: 240px;
+}
+
+.coolinput label.text {
+  font-size: 0.75rem;
+  color: #818CF8;
+  font-weight: 700;
+  position: relative;
+  top: 0.5rem;
+  margin: 0 0 0 7px;
+  padding: 0 3px;
+  background: #e8e8e8;
+  width: fit-content;
+}
+
+.coolinput input[type=text].input {
+  padding: 11px 10px;
+  font-size: 0.75rem;
+  border: 2px #818CF8 solid;
+  border-radius: 5px;
+  background: #e8e8e8;
+}
+
+.coolinput input[type=text].input:focus {
+  outline: none;
+}
+    </style>
+
+    <body>
+        <fieldset>
+            <legend>Registra tu pedido</legend>
+        <title>Pedidos</title>
+
+        <form action="/tecnocorp_pedidos" target="_blank" method="post">
+
+            <div class="coolinput">
+                <label for="input" class="text">Nombre:</label>
+                <input type="text" placeholder="Nombre" maxlength="40" required name="nombre" name="input" class="input">
+            </div>
+
+            <div class="coolinput">
+                <label for="input" class="text">Telefono:</label>
+                <input type="text" placeholder="Telefono" maxlength="40" required name="telefono" name="input" class="input">
+            </div>
+            
+            <div class="coolinput">
+                <label for="input" class="text">Direccion:</label>
+                <input type="text" placeholder="Direccion" maxlength="40" required name="direccion" name="input" class="input">
+            </div>
+
+            <div class="coolinput">
+                <label for="input" class="text">Metodo de Pago:</label>
+                <input type="text" placeholder="MetodoDePago" name="pago" class="input">
+            </div>
+
+            <div class="coolinput">
+                <label for="input" class="text">Pedido:</label>
+                <input type="text" placeholder="Pedido" maxlength="40" required name="pedido" name="input" class="input">
+            </div>
+
+            <br>
+            
+            <button class="button">
+                <span class="shadow"></span>
+                <span class="edge"></span>
+                <div class="front">
+                <span>Click me</span>
+            </div>
+            </button>
+            <br>
+            <div class="mycontainer">
+            
+                <br>
+        
+            <div style="background-color: #f0c33c;">
+                 <h2>Telefonos moviles</h2>
+                 <p>Gama alta</p>
+                 <img src="images/bg-1.jpg" alt="" width="100" height="80"/>
+                 <p>$15,000</p>
+            </div>
+
+            <div style="background-color: ;">
+                 <h2>Telefonos moviles</h2>
+                 <p>Gama media</p>
+                 <img src="images/bg-1.jpg" alt="" width="100" height="80"/>
+                 <p>$8,500</p>
+            </div>
+            <div>
+                 <h2>Televisores</h2>
+                 <p>Televisores</p>
+                 <img src="images/bg-1.jpg" alt="" width="100" height="80"/>
+                 <p>$12,000</p>
+            </div>
+            <div>
+                 <h2>Altavoces</h2>
+                 <p>Eeuipo de audio</p>
+                 <img src="images/bg-1.jpg" alt="" width="100" height="80"/>
+                 <p>$5,000</p>
+            </div>
+            <div>
+                 <h2>Microfonos</h2>
+                 <p>Microfonos</p>
+                 <img src="images/bg-1.jpg" alt="" width="100" height="80"/>
+                 <p>$$2,500</p>
+            </div>
+            <div>
+                 <h2>Consolas de Videojuegos</h2>
+                 <p>Disponibles</p>
+                 <img src="images/bg-1.jpg" alt="" width="100" height="80"/>
+                 <p>$15,000</p>
+            </div>
+            <div>
+                 <h2>Smartwatches</h2>
+                 <p>Smartwatches</p>
+                 <img src="images/bg-1.jpg" alt="" width="100" height="80"/>
+                 <p>$2,500</p>
+            </div>
+            <div>
+                 <h2>Tablet</h2>
+                 <p>Disponibles</p>
+                 <img src="images/bg-1.jpg" alt="" width="100" height="80"/>
+                 <p>$4,000</p>
+            </div>
+            <div>
+                 <h2>Lampara</h2>
+                 <p>Disponibles</p>
+                 <img src="images/bg-1.jpg" alt="" width="100" height="80"/>
+                 <p>$800</p>
+            </div>
+            <div>
+                 <h2>Cargadores</h2>
+                 <p>Disponibles</p>
+                 <img src="images/bg-1.jpg" alt="" width="100" height="80"/>
+                 <p>$500</p>
+            </div>
+            <div>
+                 <h2>Pulseras de Actividad</h2>
+                 <p>Disponibles</p>
+                 <img src="images/bg-1.jpg" alt="" width="100" height="80"/>
+                 <p>$1,500</p>
+            </div>
+            <div>
+                 <h2>Computadora portatil</h2>
+                 <p>Disponibles</p>
+                 <img src="images/bg-1.jpg" alt="" width="100" height="80"/>
+                 <p>$15,000</p>
+            </div>
+            <div>
+                 <h2>Audifonos</h2>
+                 <p>Cancelacion de ruido</p>
+                 <img src="images/bg-1.jpg" alt="" width="100" height="80"/>
+                 <p>$5,500</p>
+            </div>
+            <div>
+                 <h2>Audifonos</h2>
+                 <p>On-Ear</p>
+                 <img src="images/bg-1.jpg" alt="" width="100" height="80"/>
+                 <p>$3,000</p>
+            </div>
+            <div>
+                 <h2>Audifonos</h2>
+                 <p>In-Ear</p>
+                 <img src="images/bg-1.jpg" alt="" width="100" height="80"/>
+                 <p>$2,300</p>
+            </div>
+            <div>
+                 <h2>Audifonos</h2>
+                 <p>Circumaurales (Over-Ear)</p>
+                 <img src="images/bg-1.jpg" alt="" width="100" height="80"/>
+                 <p>$5,000</p>
+            </div>
+            <div>
+                 <h2>Kindle</h2>
+                 <p>Lector e-libros</p>
+                 <img src="images/bg-1.jpg" alt="" width="100" height="80"/>
+                 <p>$3,000</p>
+            </div>
+            <div>
+                 <h2>Mouse</h2>
+                 <p>Resistente al agua</p>
+                 <img src="images/bg-1.jpg" alt="" width="100" height="80"/>
+                 <p>$800</p>
+            </div>
+            <div>
+                 <h2>Camara</h2>
+                 <p>Disponibles</p>
+                 <img src="images/bg-1.jpg" alt="" width="100" height="80"/>
+                 <p>$13,000</p>
+            </div>
+            <div>
+                 <h2>Monitores</h2>
+                 <p>Disponibles</p>
+                 <img src="images/bg-1.jpg" alt="" width="100" height="80"/>
+                 <p>$8,000</p>
+            </div>
+
+            </div>
+
+            <ul>
+                <li>Teléfono móvil (Gama alta) </li>
+                <li>Teléfonos móviles (Gama media) </li>
+                <li>Televisión</li>
+                <li>Altavoces / Equipo de audio</li>
+                <li>Microfono</li>
+                <li>Consolas de videojuegos </li>
+                <li>Smartwatches</li>
+                <li>Tablet</li>
+                <li>Lámpara</li>
+                <li>Cargadores</li>
+                <li>Pulseras de actividad</li>
+                <li>Computadora portátil</li>
+                <li>Audífonos con cancelación de ruido</li>
+                <li>Audífonos On-Ear</li>
+                <li>Audífonos In-Ear</li>
+                <li>Audífonos Circumaurales (Over-Ear)</li>
+                <li>Kindle</li>
+                <li>Mouse</li>
+                <li>Cámara</li>
+                <li>Monitores</li>
+
+            </ul>
+            </fieldset>
+        </form>
+        
+
+    </body>
+</html>
